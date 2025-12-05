@@ -1,0 +1,10 @@
+1) What is a component in Vue.js?
+2) What is Vuejs?
+3) What is a component in Vue.js?
+4) List some features of Vue.js.
+5) How to create an instance of Vue js.
+6) What are filters in VUE.js?
+7) What is MVC in Laravel?
+8) What are filters in VUE.js?
+9)Some of the advantages of using Vue.js
+10). What is an artisan?
