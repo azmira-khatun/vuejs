@@ -4,9 +4,9 @@
             <span class="logo-text">Vue App</span>
         </div>
         <nav class="nav-links">
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Profile</a>
-            <a href="#" class="nav-item">Sittings</a>
+            <router-link to="/" class="nav-item">Home</router-link>
+            <router-link to="/about" class="nav-item">About</router-link>
+            <router-link to="/settings" class="nav-item">Settings</router-link>
         </nav>
     </header>
 </template>
@@ -27,6 +27,10 @@ export default {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* সম্পূর্ণ প্রস্থ নিশ্চিত করতে */
+    box-sizing: border-box;
+    /* padding সহ যেন 100% width থাকে */
 }
 
 .logo-text {

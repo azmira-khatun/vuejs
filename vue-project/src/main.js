@@ -1,6 +1,9 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router"; // 👈 আপনার Vue Router কনফিগারেশন ইমপোর্ট করা হয়েছে
 
-import { createApp } from 'vue'
-import App from './App.vue'
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.use(router); // 👈 অ্যাপ্লিকেশনে রুটিং ফাংশনালিটি যুক্ত করা হয়েছে
+
+app.mount("#app"); // অ্যাপ্লিকেশনটি HTML-এ রেন্ডার করা হয়েছে
