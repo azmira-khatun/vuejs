@@ -1,47 +1,60 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <MainLayout>
+    <div class="page-content">
+      <h2>👋 Welcome! This is the Main Content of Your Application</h2>
+      <p>The layout has been set up successfully. You can now render your routed views here.</p>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <section class="info-box">
+        <h3>Component Description</h3>
+        <ul>
+          <li>**Navbar:** Located at the top, holds navigation links.</li>
+          <li>**Sidebar:** Located on the left, holds main menu items.</li>
+          <li>**Footer:** Located at the bottom, displays copyright information.</li>
+        </ul>
+      </section>
+
+      <div style="height: 600px; background-color: #f7f7f7; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        Scrollable Content Area
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </MainLayout>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+// MainLayout component is imported
+import MainLayout from './components/MainLayout.vue';
+
+export default {
+  name: 'App',
+  components: {
+    MainLayout, // Component is registered for use
+  },
+};
+</script>
+
+<style>
+/* Global CSS: Resetting body margin and setting font */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+/* These styles are only for the main content within App.vue */
+.page-content {
+  color: #333;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.info-box {
+  background-color: #e3f2fd;
+  border-left: 5px solid #2196f3;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.info-box ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 </style>
